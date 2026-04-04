@@ -311,3 +311,66 @@ document.getElementById("quoteTotal").innerText = total;
 
 </body>
 </html>
+<script>
+
+/* -------------------------------
+   SCHEDULE CALCULATOR
+--------------------------------*/
+
+function calculateTotal(){
+
+var type = document.getElementById("rugType").value;
+var size = document.getElementById("rugSize").value;
+
+if(type && size){
+var total = parseFloat(type) * parseFloat(size);
+document.getElementById("totalPrice").innerText = total.toFixed(2);
+}
+
+}
+
+
+/* -------------------------------
+   INSTANT QUOTE CALCULATOR
+--------------------------------*/
+
+function calculateQuote(){
+
+var type = document.getElementById("quoteType").value;
+var size = document.getElementById("quoteSize").value;
+
+if(type && size){
+var total = parseFloat(type) * parseFloat(size);
+document.getElementById("quoteTotal").innerText = total.toFixed(2);
+}
+
+}
+
+
+/* -------------------------------
+   PAYMENT BUTTONS
+--------------------------------*/
+
+function payDeposit(){
+
+// will replace with Stripe link later
+alert("Deposit payment coming next step");
+
+}
+
+
+function payFull(){
+
+var total = document.getElementById("totalPrice").innerText;
+
+if(!total || total == "0"){
+alert("Please select rug type and size first");
+return;
+}
+
+// will replace with Stripe later
+alert("Full payment amount: $" + total);
+
+}
+
+</script>
