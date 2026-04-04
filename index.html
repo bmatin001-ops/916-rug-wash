@@ -7,11 +7,10 @@
 <title>916 Rug Wash</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#ffffff;
+background:#fff;
 color:#111;
 }
 
@@ -40,15 +39,6 @@ color:white;
 padding:100px 0;
 }
 
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.hero p{
-color:#ccc;
-}
-
 .grid{
 display:grid;
 gap:40px;
@@ -69,38 +59,6 @@ max-width:480px;
 margin:auto;
 }
 
-.form-group{
-margin-bottom:14px;
-}
-
-.form-row{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-bottom:14px;
-}
-
-.card input,
-.card select{
-width:100%;
-padding:14px;
-border-radius:10px;
-border:1px solid #ddd;
-font-size:15px;
-box-sizing:border-box;
-}
-
-.card button{
-margin-top:8px;
-padding:16px;
-font-size:16px;
-background:#111;
-color:white;
-border:none;
-border-radius:10px;
-cursor:pointer;
-}
-
 .section{
 padding:80px 0;
 border-bottom:1px solid #f0f0f0;
@@ -109,6 +67,37 @@ border-bottom:1px solid #f0f0f0;
 .section h2{
 font-size:32px;
 margin-bottom:30px;
+}
+
+input,select{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
+}
+
+button{
+background:#111;
+color:white;
+border:none;
+padding:16px;
+width:100%;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.price-box{
+background:#f8f8f8;
+padding:15px;
+border-radius:10px;
+margin-top:10px;
+text-align:center;
+font-size:20px;
+font-weight:bold;
 }
 
 .service{
@@ -121,23 +110,6 @@ border:1px solid #eee;
 .review{
 background:white;
 padding:25px;
-border-radius:12px;
-border:1px solid #eee;
-}
-
-.gallery{
-height:220px;
-background:#f4f4f4;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-border:1px solid #eee;
-}
-
-.location{
-background:#fafafa;
-padding:30px;
 border-radius:12px;
 border:1px solid #eee;
 }
@@ -167,45 +139,32 @@ text-align:center;
 
 <div>
 <h1>Premium Rug Washing Sacramento</h1>
-<p>Free pickup & delivery. 2–3 day turnaround.</p>
-
-<p>
-✔ Handmade Rugs<br>
-✔ Machine Made Rugs<br>
-✔ Professional Wash Process
-</p>
-
+<p>Free pickup & delivery • 2–3 day turnaround</p>
 </div>
 
 <div class="card">
-<h3 style="text-align:center;margin-bottom:20px;">Schedule Rug Cleaning</h3>
 
-<div class="form-group">
+<h3>Schedule Rug Cleaning</h3>
+
 <input placeholder="Full Name">
-</div>
-
-<div class="form-group">
 <input placeholder="Phone Number">
-</div>
-
-<div class="form-group">
 <input placeholder="Address">
-</div>
 
-<div class="form-group">
-<select>
-<option>Select Rug Type</option>
-<option>Handmade Rug</option>
-<option>Machine Made Rug</option>
+<select id="rugType" onchange="calculatePrice()">
+<option value="">Select Rug Type</option>
+<option value="3">Handmade Rug ($3/sqft)</option>
+<option value="1.5">Machine Made Rug ($1.5/sqft)</option>
 </select>
-</div>
 
-<div class="form-row">
-<input placeholder="Width (ft)">
-<input placeholder="Length (ft)">
-</div>
+<select id="rugSize" onchange="calculatePrice()">
+<option value="">Select Size</option>
+<option value="40">5 x 8</option>
+<option value="60">6 x 10</option>
+<option value="80">8 x 10</option>
+<option value="88">8 x 11</option>
+<option value="130">10 x 13</option>
+</select>
 
-<div class="form-group">
 <select>
 <option>Pickup Timeframe</option>
 <option>Today</option>
@@ -214,11 +173,11 @@ text-align:center;
 <option>This Week</option>
 <option>Next Week</option>
 </select>
-</div>
 
-<div class="form-group">
-<label style="font-size:13px;color:#666;">Upload Rug Photo (optional)</label>
 <input type="file">
+
+<div class="price-box">
+Total: $<span id="total">0</span>
 </div>
 
 <button>Schedule Pickup & Pay</button>
@@ -230,37 +189,30 @@ text-align:center;
 
 <section class="section container">
 
-<h2>Professional Rug Cleaning Services</h2>
+<h2>Pricing</h2>
 
-<div class="grid grid-3">
+<div class="grid grid-2">
 
 <div class="service">
-<h3>Handmade Rug Cleaning</h3>
-<p>Safe cleaning for Persian, wool, and delicate rugs using our wash process.</p>
+<h3>Handmade Rugs</h3>
+<p>$3 per sq ft</p>
+<p>5x8 — $120</p>
+<p>6x10 — $180</p>
+<p>8x10 — $240</p>
+<p>8x11 — $264</p>
+<p>10x13 — $390</p>
 </div>
 
 <div class="service">
 <h3>Machine Made Rugs</h3>
-<p>Deep cleaning for synthetic rugs with fast turnaround.</p>
+<p>$1.50 per sq ft</p>
+<p>5x8 — $60</p>
+<p>6x10 — $90</p>
+<p>8x10 — $120</p>
+<p>8x11 — $132</p>
+<p>10x13 — $195</p>
 </div>
 
-<div class="service">
-<h3>Pickup & Delivery</h3>
-<p>We pick up your rugs and return them clean within 2–3 days.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section container">
-
-<h2>Our Work</h2>
-
-<div class="grid grid-3">
-<div class="gallery">Before</div>
-<div class="gallery">Cleaning</div>
-<div class="gallery">After</div>
 </div>
 
 </section>
@@ -272,20 +224,20 @@ text-align:center;
 <div class="grid grid-3">
 
 <div class="review">
-★★★★★  
-<p>Great service. My rugs came back looking brand new.</p>
+★★★★★
+<p>Amazing service. Rugs came back perfect.</p>
 <b>— Sarah M</b>
 </div>
 
 <div class="review">
-★★★★★  
-<p>Very professional pickup and delivery. Highly recommend.</p>
+★★★★★
+<p>Very professional pickup and delivery.</p>
 <b>— David R</b>
 </div>
 
 <div class="review">
-★★★★★  
-<p>Fast turnaround and excellent cleaning quality.</p>
+★★★★★
+<p>Best rug cleaning in Sacramento.</p>
 <b>— Michael T</b>
 </div>
 
@@ -295,22 +247,36 @@ text-align:center;
 
 <section class="section container">
 
-<h2>Store Location</h2>
+<h2>Location</h2>
 
-<div class="location">
-<b>916 Rug Wash</b><br>
+<p>
+916 Rug Wash<br>
 2711 El Camino Ave<br>
-Sacramento, CA 95821<br><br>
-Drop off available by appointment. Pickup & delivery available.
-</div>
+Sacramento, CA 95821
+</p>
 
 </section>
 
 <footer>
 916 Rug Wash<br>
-2711 El Camino Ave, Sacramento CA 95821<br>
 (916) 420-7758
 </footer>
+
+<script>
+
+function calculatePrice(){
+
+var type = document.getElementById("rugType").value;
+var size = document.getElementById("rugSize").value;
+
+if(type && size){
+var total = type * size;
+document.getElementById("total").innerText = total;
+}
+
+}
+
+</script>
 
 </body>
 </html>
