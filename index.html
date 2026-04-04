@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>916 Rug Wash | Sacramento Rug Cleaning</title>
+<title>916 Rug Wash</title>
 
 <style>
 
@@ -23,37 +23,35 @@ padding:0 20px;
 
 header{
 padding:18px 0;
-border-bottom:1px solid #eaeaea;
+border-bottom:1px solid #eee;
 background:white;
-font-weight:600;
 }
 
 .header-flex{
 display:flex;
 justify-content:space-between;
 align-items:center;
+font-weight:600;
 }
 
 .hero{
 background:#0f0f0f;
 color:white;
 padding:100px 0;
-border-bottom:1px solid #222;
 }
 
 .hero h1{
-font-size:44px;
+font-size:42px;
 margin-bottom:10px;
 }
 
 .hero p{
 color:#ccc;
-font-size:18px;
 }
 
 .grid{
 display:grid;
-gap:30px;
+gap:40px;
 }
 
 @media(min-width:900px){
@@ -63,10 +61,44 @@ gap:30px;
 
 .card{
 background:white;
-padding:30px;
+padding:35px;
 border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,.06);
 border:1px solid #eee;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+max-width:480px;
+margin:auto;
+}
+
+.form-group{
+margin-bottom:14px;
+}
+
+.form-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-bottom:14px;
+}
+
+.card input,
+.card select{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:15px;
+box-sizing:border-box;
+}
+
+.card button{
+margin-top:8px;
+padding:16px;
+font-size:16px;
+background:#111;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
 }
 
 .section{
@@ -77,27 +109,6 @@ border-bottom:1px solid #f0f0f0;
 .section h2{
 font-size:32px;
 margin-bottom:30px;
-}
-
-input,select{
-width:100%;
-padding:14px;
-margin-top:10px;
-border:1px solid #ddd;
-border-radius:10px;
-font-size:15px;
-}
-
-button{
-background:#111;
-color:white;
-border:none;
-padding:16px;
-width:100%;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-margin-top:10px;
 }
 
 .service{
@@ -121,7 +132,6 @@ border-radius:12px;
 display:flex;
 align-items:center;
 justify-content:center;
-color:#777;
 border:1px solid #eee;
 }
 
@@ -137,15 +147,6 @@ background:#111;
 color:white;
 padding:60px 0;
 text-align:center;
-}
-
-.badges{
-margin-top:20px;
-color:#ccc;
-}
-
-.badges div{
-margin-bottom:6px;
 }
 
 </style>
@@ -166,38 +167,59 @@ margin-bottom:6px;
 
 <div>
 <h1>Premium Rug Washing Sacramento</h1>
+<p>Free pickup & delivery. 2–3 day turnaround.</p>
 
 <p>
-Professional rug cleaning with free pickup and delivery.  
-We clean handmade, Persian, wool, and machine-made rugs using a full wash process.
+✔ Handmade Rugs<br>
+✔ Machine Made Rugs<br>
+✔ Professional Wash Process
 </p>
-
-<div class="badges">
-<div>✔ Free Pickup & Delivery</div>
-<div>✔ 2–3 Day Turnaround</div>
-<div>✔ Handmade & Machine Made Rugs</div>
-<div>✔ Serving Sacramento & Surrounding Areas</div>
-</div>
 
 </div>
 
 <div class="card">
-<h3>Schedule Rug Cleaning</h3>
+<h3 style="text-align:center;margin-bottom:20px;">Schedule Rug Cleaning</h3>
 
+<div class="form-group">
 <input placeholder="Full Name">
-<input placeholder="Phone Number">
-<input placeholder="Address">
+</div>
 
+<div class="form-group">
+<input placeholder="Phone Number">
+</div>
+
+<div class="form-group">
+<input placeholder="Address">
+</div>
+
+<div class="form-group">
 <select>
 <option>Select Rug Type</option>
 <option>Handmade Rug</option>
 <option>Machine Made Rug</option>
 </select>
+</div>
 
+<div class="form-row">
 <input placeholder="Width (ft)">
 <input placeholder="Length (ft)">
+</div>
 
-<label>Upload Photo (optional)</label> <input type="file">
+<div class="form-group">
+<select>
+<option>Pickup Timeframe</option>
+<option>Today</option>
+<option>Tomorrow</option>
+<option>Within 2 Days</option>
+<option>This Week</option>
+<option>Next Week</option>
+</select>
+</div>
+
+<div class="form-group">
+<label style="font-size:13px;color:#666;">Upload Rug Photo (optional)</label>
+<input type="file">
+</div>
 
 <button>Schedule Pickup & Pay</button>
 
@@ -214,26 +236,17 @@ We clean handmade, Persian, wool, and machine-made rugs using a full wash proces
 
 <div class="service">
 <h3>Handmade Rug Cleaning</h3>
-<p>
-We safely clean Persian, wool, silk, and delicate handmade rugs using
-a gentle wash process that removes dirt, odors, and stains without damaging fibers.
-</p>
+<p>Safe cleaning for Persian, wool, and delicate rugs using our wash process.</p>
 </div>
 
 <div class="service">
 <h3>Machine Made Rugs</h3>
-<p>
-Deep cleaning for synthetic and machine-made rugs. We remove pet odor,
-dirt buildup, and restore appearance with fast turnaround.
-</p>
+<p>Deep cleaning for synthetic rugs with fast turnaround.</p>
 </div>
 
 <div class="service">
 <h3>Pickup & Delivery</h3>
-<p>
-We come to your home, pick up your rugs, wash them at our facility,
-and return them clean within 2–3 days.
-</p>
+<p>We pick up your rugs and return them clean within 2–3 days.</p>
 </div>
 
 </div>
@@ -246,7 +259,7 @@ and return them clean within 2–3 days.
 
 <div class="grid grid-3">
 <div class="gallery">Before</div>
-<div class="gallery">Washing Process</div>
+<div class="gallery">Cleaning</div>
 <div class="gallery">After</div>
 </div>
 
@@ -260,28 +273,20 @@ and return them clean within 2–3 days.
 
 <div class="review">
 ★★★★★  
-<p>
-Amazing service. They picked up my rugs and returned them looking brand new.
-Very professional and fast.
-</p>
-<b>— Sarah M, Sacramento</b>
+<p>Great service. My rugs came back looking brand new.</p>
+<b>— Sarah M</b>
 </div>
 
 <div class="review">
 ★★★★★  
-<p>
-Best rug cleaning in Sacramento. Easy pickup and delivery.
-Highly recommend.
-</p>
-<b>— David R, Elk Grove</b>
+<p>Very professional pickup and delivery. Highly recommend.</p>
+<b>— David R</b>
 </div>
 
 <div class="review">
 ★★★★★  
-<p>
-My Persian rug looks incredible. Great communication and quick turnaround.
-</p>
-<b>— Michael T, Arden Arcade</b>
+<p>Fast turnaround and excellent cleaning quality.</p>
+<b>— Michael T</b>
 </div>
 
 </div>
@@ -293,28 +298,18 @@ My Persian rug looks incredible. Great communication and quick turnaround.
 <h2>Store Location</h2>
 
 <div class="location">
-
 <b>916 Rug Wash</b><br>
 2711 El Camino Ave<br>
 Sacramento, CA 95821<br><br>
-
-<p>
-Drop-offs available by appointment.  
-We also provide pickup and delivery throughout Sacramento,
-Arden Arcade, Elk Grove, Granite Bay, and surrounding areas.
-</p>
-
+Drop off available by appointment. Pickup & delivery available.
 </div>
 
 </section>
 
 <footer>
-
 916 Rug Wash<br>
 2711 El Camino Ave, Sacramento CA 95821<br>
-(916) 420-7758<br>
-Professional Rug Cleaning & Pickup Delivery
-
+(916) 420-7758
 </footer>
 
 </body>
