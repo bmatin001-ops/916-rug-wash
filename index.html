@@ -130,6 +130,12 @@ padding:60px 0;
 text-align:center;
 }
 
+.payment-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
 </style>
 
 </head>
@@ -189,7 +195,10 @@ text-align:center;
 Total: $<span id="totalPrice">0</span>
 </div>
 
-<button>Schedule Pickup & Pay</button>
+<div class="payment-buttons">
+<button onclick="payDeposit()">Pay Deposit</button>
+<button onclick="payFull()">Pay Full Amount</button>
+</div>
 
 </div>
 
@@ -230,11 +239,9 @@ Quote: $<span id="quoteTotal">0</span>
 <h2>Our Work</h2>
 
 <div class="grid grid-3">
-
 <div class="media">Add Photo</div>
 <div class="media">Add Video</div>
 <div class="media">Before / After</div>
-
 </div>
 
 </section>
@@ -284,41 +291,6 @@ Sacramento, CA 95821
 <script>
 
 function calculateTotal(){
-
-var type = document.getElementById("rugType").value;
-var size = document.getElementById("rugSize").value;
-
-if(type && size){
-var total = type * size;
-document.getElementById("totalPrice").innerText = total;
-}
-
-}
-
-function calculateQuote(){
-
-var type = document.getElementById("quoteType").value;
-var size = document.getElementById("quoteSize").value;
-
-if(type && size){
-var total = type * size;
-document.getElementById("quoteTotal").innerText = total;
-}
-
-}
-
-</script>
-
-</body>
-</html>
-<script>
-
-/* -------------------------------
-   SCHEDULE CALCULATOR
---------------------------------*/
-
-function calculateTotal(){
-
 var type = document.getElementById("rugType").value;
 var size = document.getElementById("rugSize").value;
 
@@ -326,16 +298,9 @@ if(type && size){
 var total = parseFloat(type) * parseFloat(size);
 document.getElementById("totalPrice").innerText = total.toFixed(2);
 }
-
 }
 
-
-/* -------------------------------
-   INSTANT QUOTE CALCULATOR
---------------------------------*/
-
 function calculateQuote(){
-
 var type = document.getElementById("quoteType").value;
 var size = document.getElementById("quoteSize").value;
 
@@ -343,34 +308,26 @@ if(type && size){
 var total = parseFloat(type) * parseFloat(size);
 document.getElementById("quoteTotal").innerText = total.toFixed(2);
 }
-
 }
-
-
-/* -------------------------------
-   PAYMENT BUTTONS
---------------------------------*/
 
 function payDeposit(){
-
-// will replace with Stripe link later
-alert("Deposit payment coming next step");
-
+alert("Deposit payment will be connected next");
 }
-
 
 function payFull(){
 
 var total = document.getElementById("totalPrice").innerText;
 
-if(!total || total == "0"){
+if(!total || total == "0.00"){
 alert("Please select rug type and size first");
 return;
 }
 
-// will replace with Stripe later
 alert("Full payment amount: $" + total);
 
 }
 
 </script>
+
+</body>
+</html>
