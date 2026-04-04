@@ -7,7 +7,6 @@
 <title>916 Rug Wash</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -190,6 +189,35 @@ Total: $<span id="totalPrice">0</span>
 
 <section class="section container">
 
+<h2>Get Instant Quote</h2>
+
+<div class="card">
+
+<select id="quoteType" onchange="calculateQuote()">
+<option value="">Select Rug Type</option>
+<option value="3">Handmade Rug ($3 / sqft)</option>
+<option value="1.5">Machine Made Rug ($1.5 / sqft)</option>
+</select>
+
+<select id="quoteSize" onchange="calculateQuote()">
+<option value="">Select Size</option>
+<option value="40">5 ft x 8 ft</option>
+<option value="60">6 ft x 10 ft</option>
+<option value="80">8 ft x 10 ft</option>
+<option value="88">8 ft x 11 ft</option>
+<option value="130">10 ft x 13 ft</option>
+</select>
+
+<div class="total">
+Quote: $<span id="quoteTotal">0</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="section container">
+
 <h2>Pricing</h2>
 
 <div class="grid grid-2">
@@ -270,6 +298,18 @@ var size = document.getElementById("rugSize").value;
 if(type && size){
 var total = type * size;
 document.getElementById("totalPrice").innerText = total;
+}
+
+}
+
+function calculateQuote(){
+
+var type = document.getElementById("quoteType").value;
+var size = document.getElementById("quoteSize").value;
+
+if(type && size){
+var total = type * size;
+document.getElementById("quoteTotal").innerText = total;
 }
 
 }
