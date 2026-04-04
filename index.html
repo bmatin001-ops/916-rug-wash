@@ -7,10 +7,11 @@
 <title>916 Rug Wash</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#fff;
+background:#ffffff;
 color:#111;
 }
 
@@ -90,14 +91,14 @@ cursor:pointer;
 margin-top:10px;
 }
 
-.price-box{
-background:#f8f8f8;
+.total{
+background:#f7f7f7;
 padding:15px;
 border-radius:10px;
-margin-top:10px;
+margin-top:12px;
 text-align:center;
 font-size:20px;
-font-weight:bold;
+font-weight:600;
 }
 
 .service{
@@ -139,7 +140,7 @@ text-align:center;
 
 <div>
 <h1>Premium Rug Washing Sacramento</h1>
-<p>Free pickup & delivery • 2–3 day turnaround</p>
+<p>Free pickup & delivery. 2–3 day turnaround.</p>
 </div>
 
 <div class="card">
@@ -150,19 +151,19 @@ text-align:center;
 <input placeholder="Phone Number">
 <input placeholder="Address">
 
-<select id="rugType" onchange="calculatePrice()">
+<select id="rugType" onchange="calculateTotal()">
 <option value="">Select Rug Type</option>
-<option value="3">Handmade Rug ($3/sqft)</option>
-<option value="1.5">Machine Made Rug ($1.5/sqft)</option>
+<option value="3">Handmade Rug ($3 / sqft)</option>
+<option value="1.5">Machine Made Rug ($1.5 / sqft)</option>
 </select>
 
-<select id="rugSize" onchange="calculatePrice()">
+<select id="rugSize" onchange="calculateTotal()">
 <option value="">Select Size</option>
-<option value="40">5 x 8</option>
-<option value="60">6 x 10</option>
-<option value="80">8 x 10</option>
-<option value="88">8 x 11</option>
-<option value="130">10 x 13</option>
+<option value="40">5 ft x 8 ft</option>
+<option value="60">6 ft x 10 ft</option>
+<option value="80">8 ft x 10 ft</option>
+<option value="88">8 ft x 11 ft</option>
+<option value="130">10 ft x 13 ft</option>
 </select>
 
 <select>
@@ -176,8 +177,8 @@ text-align:center;
 
 <input type="file">
 
-<div class="price-box">
-Total: $<span id="total">0</span>
+<div class="total">
+Total: $<span id="totalPrice">0</span>
 </div>
 
 <button>Schedule Pickup & Pay</button>
@@ -225,20 +226,17 @@ Total: $<span id="total">0</span>
 
 <div class="review">
 ★★★★★
-<p>Amazing service. Rugs came back perfect.</p>
-<b>— Sarah M</b>
+<p>Great service. My rugs came back looking brand new.</p>
 </div>
 
 <div class="review">
 ★★★★★
 <p>Very professional pickup and delivery.</p>
-<b>— David R</b>
 </div>
 
 <div class="review">
 ★★★★★
-<p>Best rug cleaning in Sacramento.</p>
-<b>— Michael T</b>
+<p>Fast turnaround and excellent cleaning.</p>
 </div>
 
 </div>
@@ -247,7 +245,7 @@ Total: $<span id="total">0</span>
 
 <section class="section container">
 
-<h2>Location</h2>
+<h2>Store Location</h2>
 
 <p>
 916 Rug Wash<br>
@@ -264,14 +262,14 @@ Sacramento, CA 95821
 
 <script>
 
-function calculatePrice(){
+function calculateTotal(){
 
 var type = document.getElementById("rugType").value;
 var size = document.getElementById("rugSize").value;
 
 if(type && size){
 var total = type * size;
-document.getElementById("total").innerText = total;
+document.getElementById("totalPrice").innerText = total;
 }
 
 }
