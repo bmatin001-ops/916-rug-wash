@@ -4,80 +4,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>916 Rug Wash</title>
+
+<title>916 Rug Wash | Sacramento Rug Cleaning</title>
 
 <style>
+
 body{
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#fff;
-color:#111
-}
-
-.header{
-padding:20px;
-border-bottom:1px solid #eee;
-display:flex;
-justify-content:space-between;
-font-weight:bold
-}
-
-.hero{
-background:#111;
-color:#fff;
-padding:60px 20px
+color:#111;
+background:#ffffff;
 }
 
 .container{
 max-width:1100px;
-margin:auto
+margin:auto;
+padding:0 20px;
 }
 
-.card{
-background:#fff;
-padding:20px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,.08)
+header{
+padding:20px 0;
+border-bottom:1px solid #eee;
+font-weight:bold;
 }
 
-input,select{
-width:100%;
-padding:12px;
-margin:6px 0;
-border:1px solid #ddd;
-border-radius:8px;
-font-size:14px
-}
-
-button{
+.hero{
 background:#111;
-color:#fff;
-padding:14px;
-border:none;
-border-radius:8px;
-width:100%;
-font-size:16px;
-cursor:pointer
+color:white;
+padding:80px 0;
 }
 
-.section{
-padding:60px 20px
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ccc;
 }
 
 .grid{
 display:grid;
-gap:20px
+gap:30px;
 }
 
-@media(min-width:700px){
-.grid-2{grid-template-columns:1fr 1fr}
-.grid-3{grid-template-columns:1fr 1fr 1fr}
+@media(min-width:800px){
+.grid-2{
+grid-template-columns:1fr 1fr;
+}
+.grid-3{
+grid-template-columns:1fr 1fr 1fr;
+}
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+input,select{
+width:100%;
+padding:14px;
+margin-top:8px;
+border-radius:8px;
+border:1px solid #ddd;
+}
+
+button{
+width:100%;
+padding:16px;
+background:#111;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+.section{
+padding:70px 0;
+}
+
+.section-gray{
+background:#f7f7f7;
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
 }
 
 .pricing{
-background:#f7f7f7;
-padding:40px;
-border-radius:12px
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.gallery{
+height:200px;
+background:#eee;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#777;
+}
+
+footer{
+background:#111;
+color:white;
+padding:40px 0;
+text-align:center;
 }
 
 </style>
@@ -86,31 +126,29 @@ border-radius:12px
 
 <body>
 
-<div class="header container">
-<div>916 Rug Wash</div>
-<div>(916) 420-7758</div>
+<header>
+<div class="container">
+916 Rug Wash — (916) 420-7758
 </div>
+</header>
 
-<div class="hero">
+<section class="hero">
 <div class="container grid grid-2">
 
 <div>
-<h1>Schedule Rug Cleaning</h1>
+<h1>Premium Rug Washing</h1>
+<p>Pickup & delivery included. 2–3 day turnaround.</p>
 
 <p>
-Premium rug washing with pickup & delivery included.
-2–3 day turnaround.
+Handmade Rugs — $3 / sq ft<br>
+Machine Made — $1.50 / sq ft
 </p>
-
-<div style="margin-top:20px">
-<div>Handmade Rugs — $3 / sq ft</div>
-<div>Machine Made Rugs — $1.50 / sq ft</div>
-<div>Free Pickup & Delivery</div>
-</div>
 
 </div>
 
 <div class="card">
+
+<h3>Schedule Cleaning</h3>
 
 <input placeholder="Full Name">
 <input placeholder="Phone Number">
@@ -132,29 +170,36 @@ Premium rug washing with pickup & delivery included.
 </div>
 
 </div>
-</div>
+</section>
 
-<div class="section container">
-<h2>Our Work</h2>
+<section class="section container">
+
+<h2>Our Rug Cleaning Services</h2>
 
 <div class="grid grid-3">
 
 <div class="card">
-Add Photo
+<h3>Handmade Rugs</h3>
+<p>Persian, wool, and delicate rugs cleaned safely.</p>
 </div>
 
 <div class="card">
-Add Video
+<h3>Machine Made Rugs</h3>
+<p>Deep cleaned and fast turnaround.</p>
 </div>
 
 <div class="card">
-Before / After
+<h3>Pickup & Delivery</h3>
+<p>We pick up and return your rugs to your home.</p>
 </div>
 
 </div>
-</div>
 
-<div class="section container">
+</section>
+
+<section class="section section-gray">
+
+<div class="container">
 
 <h2>Pricing</h2>
 
@@ -163,38 +208,63 @@ Before / After
 <div class="pricing">
 <h3>Handmade Rugs</h3>
 <p>$3 per sq ft</p>
-<p>5x8 = $120</p>
-<p>6x10 = $180</p>
-<p>8x10 = $240</p>
-<p>8x11 = $264</p>
-<p>10x13 = $390</p>
+<p>5x8 — $120</p>
+<p>6x10 — $180</p>
+<p>8x10 — $240</p>
+<p>8x11 — $264</p>
+<p>10x13 — $390</p>
 </div>
 
 <div class="pricing">
 <h3>Machine Made Rugs</h3>
 <p>$1.50 per sq ft</p>
-<p>5x8 = $60</p>
-<p>6x10 = $90</p>
-<p>8x10 = $120</p>
-<p>8x11 = $132</p>
-<p>10x13 = $195</p>
+<p>5x8 — $60</p>
+<p>6x10 — $90</p>
+<p>8x10 — $120</p>
+<p>8x11 — $132</p>
+<p>10x13 — $195</p>
 </div>
 
 </div>
 
 </div>
+</section>
 
-<div class="section container">
+<section class="section container">
+
+<h2>Our Work</h2>
+
+<div class="grid grid-3">
+
+<div class="gallery">Add Photo</div>
+<div class="gallery">Add Video</div>
+<div class="gallery">Before / After</div>
+
+</div>
+
+</section>
+
+<section class="section section-gray">
+
+<div class="container">
 
 <h2>Service Areas</h2>
 
 <p>
-Sacramento, East Sacramento, Land Park, Sierra Oaks, Arden Oaks,
-Arden-Arcade, Fair Oaks, Elk Grove, Granite Bay, Loomis, Rocklin,
-Roseville, El Dorado Hills, Folsom, Serrano
+Sacramento, East Sacramento, Land Park, Sierra Oaks,
+Arden Oaks, Arden-Arcade, Elk Grove, Granite Bay,
+Loomis, Rocklin, Roseville, El Dorado Hills, Folsom
 </p>
 
 </div>
+
+</section>
+
+<footer>
+916 Rug Wash<br>
+Sacramento Rug Pickup & Delivery<br>
+(916) 420-7758
+</footer>
 
 </body>
 </html>
