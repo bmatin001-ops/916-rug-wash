@@ -4,43 +4,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>916 Rug Wash | Sacramento Rug Cleaning</title>
 
 <style>
 
 body{
-font-family:Arial, Helvetica, sans-serif;
 margin:0;
-color:#111;
+font-family:Arial, Helvetica, sans-serif;
 background:#ffffff;
+color:#111;
 }
 
 .container{
-max-width:1100px;
+max-width:1150px;
 margin:auto;
 padding:0 20px;
 }
 
 header{
-padding:20px 0;
-border-bottom:1px solid #eee;
-font-weight:bold;
+padding:18px 0;
+border-bottom:1px solid #eaeaea;
+background:white;
+font-weight:600;
+}
+
+.header-flex{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .hero{
-background:#111;
+background:#0f0f0f;
 color:white;
-padding:80px 0;
+padding:100px 0;
+border-bottom:1px solid #222;
 }
 
 .hero h1{
-font-size:40px;
+font-size:44px;
 margin-bottom:10px;
 }
 
 .hero p{
 color:#ccc;
+font-size:18px;
 }
 
 .grid{
@@ -48,76 +56,96 @@ display:grid;
 gap:30px;
 }
 
-@media(min-width:800px){
-.grid-2{
-grid-template-columns:1fr 1fr;
-}
-.grid-3{
-grid-template-columns:1fr 1fr 1fr;
-}
+@media(min-width:900px){
+.grid-2{grid-template-columns:1fr 1fr}
+.grid-3{grid-template-columns:1fr 1fr 1fr}
 }
 
 .card{
 background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+border:1px solid #eee;
+}
+
+.section{
+padding:80px 0;
+border-bottom:1px solid #f0f0f0;
+}
+
+.section h2{
+font-size:32px;
+margin-bottom:30px;
 }
 
 input,select{
 width:100%;
 padding:14px;
-margin-top:8px;
-border-radius:8px;
+margin-top:10px;
 border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
 }
 
 button{
-width:100%;
-padding:16px;
 background:#111;
 color:white;
 border:none;
-border-radius:8px;
+padding:16px;
+width:100%;
+border-radius:10px;
 font-size:16px;
 cursor:pointer;
+margin-top:10px;
 }
 
-.section{
-padding:70px 0;
-}
-
-.section-gray{
-background:#f7f7f7;
-}
-
-h2{
-font-size:28px;
-margin-bottom:20px;
-}
-
-.pricing{
+.service{
 background:white;
 padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.05);
+border-radius:12px;
+border:1px solid #eee;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:12px;
+border:1px solid #eee;
 }
 
 .gallery{
-height:200px;
-background:#eee;
-border-radius:10px;
+height:220px;
+background:#f4f4f4;
+border-radius:12px;
 display:flex;
 align-items:center;
 justify-content:center;
 color:#777;
+border:1px solid #eee;
+}
+
+.location{
+background:#fafafa;
+padding:30px;
+border-radius:12px;
+border:1px solid #eee;
 }
 
 footer{
 background:#111;
 color:white;
-padding:40px 0;
+padding:60px 0;
 text-align:center;
+}
+
+.badges{
+margin-top:20px;
+color:#ccc;
+}
+
+.badges div{
+margin-bottom:6px;
 }
 
 </style>
@@ -127,8 +155,9 @@ text-align:center;
 <body>
 
 <header>
-<div class="container">
-916 Rug Wash — (916) 420-7758
+<div class="container header-flex">
+<div>916 Rug Wash</div>
+<div>(916) 420-7758</div>
 </div>
 </header>
 
@@ -136,19 +165,24 @@ text-align:center;
 <div class="container grid grid-2">
 
 <div>
-<h1>Premium Rug Washing</h1>
-<p>Pickup & delivery included. 2–3 day turnaround.</p>
+<h1>Premium Rug Washing Sacramento</h1>
 
 <p>
-Handmade Rugs — $3 / sq ft<br>
-Machine Made — $1.50 / sq ft
+Professional rug cleaning with free pickup and delivery.  
+We clean handmade, Persian, wool, and machine-made rugs using a full wash process.
 </p>
+
+<div class="badges">
+<div>✔ Free Pickup & Delivery</div>
+<div>✔ 2–3 Day Turnaround</div>
+<div>✔ Handmade & Machine Made Rugs</div>
+<div>✔ Serving Sacramento & Surrounding Areas</div>
+</div>
 
 </div>
 
 <div class="card">
-
-<h3>Schedule Cleaning</h3>
+<h3>Schedule Rug Cleaning</h3>
 
 <input placeholder="Full Name">
 <input placeholder="Phone Number">
@@ -165,7 +199,7 @@ Machine Made — $1.50 / sq ft
 
 <label>Upload Photo (optional)</label> <input type="file">
 
-<button>Schedule & Pay</button>
+<button>Schedule Pickup & Pay</button>
 
 </div>
 
@@ -174,60 +208,36 @@ Machine Made — $1.50 / sq ft
 
 <section class="section container">
 
-<h2>Our Rug Cleaning Services</h2>
+<h2>Professional Rug Cleaning Services</h2>
 
 <div class="grid grid-3">
 
-<div class="card">
-<h3>Handmade Rugs</h3>
-<p>Persian, wool, and delicate rugs cleaned safely.</p>
+<div class="service">
+<h3>Handmade Rug Cleaning</h3>
+<p>
+We safely clean Persian, wool, silk, and delicate handmade rugs using
+a gentle wash process that removes dirt, odors, and stains without damaging fibers.
+</p>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Machine Made Rugs</h3>
-<p>Deep cleaned and fast turnaround.</p>
+<p>
+Deep cleaning for synthetic and machine-made rugs. We remove pet odor,
+dirt buildup, and restore appearance with fast turnaround.
+</p>
 </div>
 
-<div class="card">
+<div class="service">
 <h3>Pickup & Delivery</h3>
-<p>We pick up and return your rugs to your home.</p>
+<p>
+We come to your home, pick up your rugs, wash them at our facility,
+and return them clean within 2–3 days.
+</p>
 </div>
 
 </div>
 
-</section>
-
-<section class="section section-gray">
-
-<div class="container">
-
-<h2>Pricing</h2>
-
-<div class="grid grid-2">
-
-<div class="pricing">
-<h3>Handmade Rugs</h3>
-<p>$3 per sq ft</p>
-<p>5x8 — $120</p>
-<p>6x10 — $180</p>
-<p>8x10 — $240</p>
-<p>8x11 — $264</p>
-<p>10x13 — $390</p>
-</div>
-
-<div class="pricing">
-<h3>Machine Made Rugs</h3>
-<p>$1.50 per sq ft</p>
-<p>5x8 — $60</p>
-<p>6x10 — $90</p>
-<p>8x10 — $120</p>
-<p>8x11 — $132</p>
-<p>10x13 — $195</p>
-</div>
-
-</div>
-
-</div>
 </section>
 
 <section class="section container">
@@ -235,25 +245,63 @@ Machine Made — $1.50 / sq ft
 <h2>Our Work</h2>
 
 <div class="grid grid-3">
+<div class="gallery">Before</div>
+<div class="gallery">Washing Process</div>
+<div class="gallery">After</div>
+</div>
 
-<div class="gallery">Add Photo</div>
-<div class="gallery">Add Video</div>
-<div class="gallery">Before / After</div>
+</section>
+
+<section class="section container">
+
+<h2>Customer Reviews</h2>
+
+<div class="grid grid-3">
+
+<div class="review">
+★★★★★  
+<p>
+Amazing service. They picked up my rugs and returned them looking brand new.
+Very professional and fast.
+</p>
+<b>— Sarah M, Sacramento</b>
+</div>
+
+<div class="review">
+★★★★★  
+<p>
+Best rug cleaning in Sacramento. Easy pickup and delivery.
+Highly recommend.
+</p>
+<b>— David R, Elk Grove</b>
+</div>
+
+<div class="review">
+★★★★★  
+<p>
+My Persian rug looks incredible. Great communication and quick turnaround.
+</p>
+<b>— Michael T, Arden Arcade</b>
+</div>
 
 </div>
 
 </section>
 
-<section class="section section-gray">
+<section class="section container">
 
-<div class="container">
+<h2>Store Location</h2>
 
-<h2>Service Areas</h2>
+<div class="location">
+
+<b>916 Rug Wash</b><br>
+2711 El Camino Ave<br>
+Sacramento, CA 95821<br><br>
 
 <p>
-Sacramento, East Sacramento, Land Park, Sierra Oaks,
-Arden Oaks, Arden-Arcade, Elk Grove, Granite Bay,
-Loomis, Rocklin, Roseville, El Dorado Hills, Folsom
+Drop-offs available by appointment.  
+We also provide pickup and delivery throughout Sacramento,
+Arden Arcade, Elk Grove, Granite Bay, and surrounding areas.
 </p>
 
 </div>
@@ -261,9 +309,12 @@ Loomis, Rocklin, Roseville, El Dorado Hills, Folsom
 </section>
 
 <footer>
+
 916 Rug Wash<br>
-Sacramento Rug Pickup & Delivery<br>
-(916) 420-7758
+2711 El Camino Ave, Sacramento CA 95821<br>
+(916) 420-7758<br>
+Professional Rug Cleaning & Pickup Delivery
+
 </footer>
 
 </body>
