@@ -94,14 +94,22 @@ margin-top:10px;
 }
 
 .total{
-background:#f7f7f7;
-padding:15px;
-border-radius:10px;
-margin-top:12px;
+background:#000;
+color:white;
+padding:20px;
+border-radius:12px;
+margin-top:14px;
 text-align:center;
-font-size:20px;
-font-weight:600;
-border:1px solid #eee;
+font-size:28px;
+font-weight:700;
+border:2px solid #000;
+}
+
+.deposit-note{
+text-align:center;
+font-size:14px;
+color:#555;
+margin-top:10px;
 }
 
 .review{
@@ -121,12 +129,6 @@ align-items:center;
 justify-content:center;
 color:#777;
 font-weight:600;
-}
-
-.payment-buttons{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
 }
 
 footer{
@@ -155,6 +157,7 @@ text-align:center;
 <div>
 <h1>Premium Rug Washing Sacramento</h1>
 <p>Free pickup & delivery. 2–3 day turnaround.</p>
+<p>$50 deposit required. Full payment due upon delivery.</p>
 </div>
 
 <div class="card">
@@ -181,12 +184,28 @@ text-align:center;
 </select>
 
 <select>
-<option>Pickup Timeframe</option>
-<option>Today</option>
-<option>Tomorrow</option>
-<option>Within 2 Days</option>
-<option>This Week</option>
-<option>Next Week</option>
+<option>Select Pickup Day</option>
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+</select>
+
+<select>
+<option>Select Time (10am - 7pm)</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>12:00 PM</option>
+<option>1:00 PM</option>
+<option>2:00 PM</option>
+<option>3:00 PM</option>
+<option>4:00 PM</option>
+<option>5:00 PM</option>
+<option>6:00 PM</option>
+<option>7:00 PM</option>
 </select>
 
 <input type="file">
@@ -195,10 +214,11 @@ text-align:center;
 Total: $<span id="totalPrice">0.00</span>
 </div>
 
-<div class="payment-buttons">
-<button onclick="payDeposit()">Pay $50 Deposit</button>
-<button onclick="payFull()">Pay Full Amount</button>
+<div class="deposit-note">
+$50 deposit today • Remaining balance due upon delivery
 </div>
+
+<button onclick="payDeposit()">Schedule & Pay $50 Deposit</button>
 
 </div>
 
@@ -314,23 +334,7 @@ function payDeposit(){
 window.location.href="https://buy.stripe.com/eVq14mcJzdymbPa8QR9oc00";
 }
 
-function payFull(){
-
-var total = document.getElementById("totalPrice").innerText;
-
-if(!total || total == "0.00"){
-alert("Please select rug type and size first");
-return;
-}
-
-alert("Enter quantity: " + total + " on next page");
-
-window.location.href="https://buy.stripe.com/14A9AS7pf1PE06sc339oc02";
-
-}
-
 </script>
 
 </body>
 </html>
-
