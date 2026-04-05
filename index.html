@@ -123,17 +123,17 @@ color:#777;
 font-weight:600;
 }
 
+.payment-buttons{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
 footer{
 background:#111;
 color:white;
 padding:60px 0;
 text-align:center;
-}
-
-.payment-buttons{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
 }
 
 </style>
@@ -311,7 +311,7 @@ document.getElementById("quoteTotal").innerText = total.toFixed(2);
 }
 
 function payDeposit(){
-alert("Deposit payment will be connected next");
+window.location.href="https://buy.stripe.com/eVq14mcJzdymbPa8QR9oc00";
 }
 
 function payFull(){
@@ -323,7 +323,8 @@ alert("Please select rug type and size first");
 return;
 }
 
-alert("Full payment amount: $" + total);
+// Replace with Stripe dynamic checkout later
+window.location.href="https://buy.stripe.com/8x26oGfVLbqe1aw1op9oc01";
 
 }
 
