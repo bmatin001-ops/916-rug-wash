@@ -192,11 +192,11 @@ text-align:center;
 <input type="file">
 
 <div class="total">
-Total: $<span id="totalPrice">0</span>
+Total: $<span id="totalPrice">0.00</span>
 </div>
 
 <div class="payment-buttons">
-<button onclick="payDeposit()">Pay Deposit</button>
+<button onclick="payDeposit()">Pay $50 Deposit</button>
 <button onclick="payFull()">Pay Full Amount</button>
 </div>
 
@@ -227,7 +227,7 @@ Total: $<span id="totalPrice">0</span>
 </select>
 
 <div class="total">
-Quote: $<span id="quoteTotal">0</span>
+Quote: $<span id="quoteTotal">0.00</span>
 </div>
 
 </div>
@@ -311,7 +311,7 @@ document.getElementById("quoteTotal").innerText = total.toFixed(2);
 }
 
 function payDeposit(){
-window.location.href="https://buy.stripe.com/eVq14mcJzdymbPa8QR9oc00";
+window.location.href="YOUR_DEPOSIT_LINK";
 }
 
 function payFull(){
@@ -323,8 +323,9 @@ alert("Please select rug type and size first");
 return;
 }
 
-// Replace with Stripe dynamic checkout later
-window.location.href="https://buy.stripe.com/8x26oGfVLbqe1aw1op9oc01";
+alert("Enter quantity: " + total + " on next page");
+
+window.location.href="YOUR_FULL_PAYMENT_LINK";
 
 }
 
@@ -332,3 +333,4 @@ window.location.href="https://buy.stripe.com/8x26oGfVLbqe1aw1op9oc01";
 
 </body>
 </html>
+
