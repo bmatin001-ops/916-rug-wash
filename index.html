@@ -178,11 +178,11 @@ text-align:center;
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Rug Cleaning Booking">
 
-<label>Full Name</label> <input name="Name" placeholder="John Smith" required>
+<label>Full Name</label> <input name="Name" required>
 
-<label>Phone Number</label> <input name="Phone" placeholder="(916) 000-0000" required>
+<label>Phone Number</label> <input name="Phone" required>
 
-<label>Address</label> <input name="Address" placeholder="Pickup address" required>
+<label>Address</label> <input name="Address" required>
 
 <label>Rug Type</label> <select id="rugType" name="Rug Type" onchange="calculateTotal()" required>
 
@@ -234,6 +234,35 @@ $50 deposit today • Remaining balance due upon delivery
 </div>
 
 </div>
+</section>
+
+<section class="section container">
+
+<h2>Get Instant Quote</h2>
+
+<div class="card">
+
+<select id="quoteType" onchange="calculateQuote()">
+<option value="">Select Rug Type</option>
+<option value="3">Handmade Rug ($3 / sqft)</option>
+<option value="1.5">Machine Made Rug ($1.5 / sqft)</option>
+</select>
+
+<select id="quoteSize" onchange="calculateQuote()">
+<option value="">Select Size</option>
+<option value="40">5 ft x 8 ft</option>
+<option value="60">6 ft x 10 ft</option>
+<option value="80">8 ft x 10 ft</option>
+<option value="88">8 ft x 11 ft</option>
+<option value="130">10 ft x 13 ft</option>
+</select>
+
+<div class="total">
+Quote: $<span id="quoteTotal">0.00</span>
+</div>
+
+</div>
+
 </section>
 
 <section class="section container">
@@ -310,6 +339,16 @@ var size = document.getElementById("rugSize").value;
 if(type && size){
 var total = parseFloat(type) * parseFloat(size);
 document.getElementById("totalPrice").innerText = total.toFixed(2);
+}
+}
+
+function calculateQuote(){
+var type = document.getElementById("quoteType").value;
+var size = document.getElementById("quoteSize").value;
+
+if(type && size){
+var total = parseFloat(type) * parseFloat(size);
+document.getElementById("quoteTotal").innerText = total.toFixed(2);
 }
 }
 
