@@ -43,7 +43,7 @@ border-bottom:1px solid #222;
 
 .grid{
 display:grid;
-gap:40px;
+gap:30px;
 align-items:center;
 }
 
@@ -54,7 +54,7 @@ align-items:center;
 
 .card{
 background:white;
-padding:40px;
+padding:30px;
 border-radius:14px;
 border:1px solid #eaeaea;
 box-shadow:0 10px 30px rgba(0,0,0,.05);
@@ -75,15 +75,15 @@ text-align:center;
 
 label{
 display:block;
-margin-top:18px;
+margin-top:10px;
 font-weight:600;
 font-size:14px;
 }
 
 input,select{
 width:100%;
-padding:14px;
-margin-top:6px;
+padding:12px;
+margin-top:4px;
 border:1px solid #ddd;
 border-radius:10px;
 font-size:15px;
@@ -94,22 +94,22 @@ button{
 background:#111;
 color:white;
 border:none;
-padding:16px;
+padding:14px;
 width:100%;
 border-radius:10px;
 font-size:16px;
 cursor:pointer;
-margin-top:18px;
+margin-top:14px;
 }
 
 .total{
 background:#000;
 color:white;
-padding:22px;
+padding:18px;
 border-radius:12px;
-margin-top:18px;
+margin-top:14px;
 text-align:center;
-font-size:30px;
+font-size:28px;
 font-weight:700;
 }
 
@@ -117,7 +117,7 @@ font-weight:700;
 text-align:center;
 font-size:14px;
 color:#555;
-margin-top:10px;
+margin-top:6px;
 }
 
 .before-after{
@@ -173,20 +173,25 @@ text-align:center;
 
 <h3>Schedule Rug Cleaning</h3>
 
-<label>Full Name</label> <input placeholder="John Smith">
+<form action="https://formsubmit.co/bwholesale18@gmail.com" method="POST" onsubmit="submitAndPay();">
 
-<label>Phone Number</label> <input placeholder="(916) 000-0000">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Rug Cleaning Booking">
 
-<label>Address</label> <input placeholder="Pickup address">
+<label>Full Name</label> <input name="Name" placeholder="John Smith" required>
 
-<label>Rug Type</label> <select id="rugType" onchange="calculateTotal()">
+<label>Phone Number</label> <input name="Phone" placeholder="(916) 000-0000" required>
+
+<label>Address</label> <input name="Address" placeholder="Pickup address" required>
+
+<label>Rug Type</label> <select id="rugType" name="Rug Type" onchange="calculateTotal()" required>
 
 <option value="">Select Rug Type</option>
 <option value="3">Handmade Rug ($3 / sqft)</option>
 <option value="1.5">Machine Made Rug ($1.5 / sqft)</option>
 </select>
 
-<label>Rug Size</label> <select id="rugSize" onchange="calculateTotal()">
+<label>Rug Size</label> <select id="rugSize" name="Rug Size" onchange="calculateTotal()" required>
 
 <option value="">Select Size</option>
 <option value="40">5 ft x 8 ft</option>
@@ -196,9 +201,9 @@ text-align:center;
 <option value="130">10 ft x 13 ft</option>
 </select>
 
-<label>Select Pickup Date</label> <input type="date" id="datePicker">
+<label>Select Pickup Date</label> <input type="date" id="datePicker" name="Date" required>
 
-<label>Select Time (10am–7pm)</label> <select>
+<label>Select Time (10am–7pm)</label> <select name="Time" required>
 
 <option>10:00 AM</option>
 <option>11:00 AM</option>
@@ -212,7 +217,7 @@ text-align:center;
 <option>7:00 PM</option>
 </select>
 
-<label>Upload Rug Photo (optional)</label> <input type="file">
+<label>Upload Rug Photo (optional)</label> <input type="file" name="Photo">
 
 <div class="total">
 Total: $<span id="totalPrice">0.00</span>
@@ -222,7 +227,9 @@ Total: $<span id="totalPrice">0.00</span>
 $50 deposit today • Remaining balance due upon delivery
 </div>
 
-<button onclick="payDeposit()">Schedule & Pay $50 Deposit</button>
+<button type="submit">Schedule & Pay $50 Deposit</button>
+
+</form>
 
 </div>
 
@@ -278,43 +285,6 @@ Quote: $<span id="quoteTotal">0.00</span>
 
 </section>
 
-<section class="section container">
-
-<h2>Customer Reviews</h2>
-
-<div class="grid grid-3">
-
-<div class="review">
-★★★★★
-<p>Great service. My rugs came back looking brand new.</p>
-</div>
-
-<div class="review">
-★★★★★
-<p>Very professional pickup and delivery.</p>
-</div>
-
-<div class="review">
-★★★★★
-<p>Fast turnaround and excellent cleaning.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section container">
-
-<h2>Store Location</h2>
-
-<p style="text-align:center;">
-916 Rug Wash<br>
-2711 El Camino Ave<br>
-Sacramento, CA 95821
-</p>
-
-</section>
-
 <footer>
 916 Rug Wash<br>
 (916) 420-7758
@@ -345,12 +315,13 @@ document.getElementById("quoteTotal").innerText = total.toFixed(2);
 }
 }
 
-function payDeposit(){
+function submitAndPay(){
+setTimeout(function(){
 window.location.href="https://buy.stripe.com/eVq14mcJzdymbPa8QR9oc00";
+},500);
 }
 
 </script>
 
 </body>
 </html>
-
