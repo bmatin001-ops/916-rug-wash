@@ -44,6 +44,7 @@ border-bottom:1px solid #222;
 .grid{
 display:grid;
 gap:40px;
+align-items:center;
 }
 
 @media(min-width:900px){
@@ -53,12 +54,12 @@ gap:40px;
 
 .card{
 background:white;
-padding:35px;
+padding:40px;
 border-radius:14px;
 border:1px solid #eaeaea;
 box-shadow:0 10px 30px rgba(0,0,0,.05);
-max-width:480px;
-margin:auto;
+max-width:520px;
+margin:0 auto;
 }
 
 .section{
@@ -72,13 +73,21 @@ margin-bottom:30px;
 text-align:center;
 }
 
+label{
+display:block;
+margin-top:18px;
+font-weight:600;
+font-size:14px;
+}
+
 input,select{
 width:100%;
 padding:14px;
-margin-top:10px;
+margin-top:6px;
 border:1px solid #ddd;
 border-radius:10px;
 font-size:15px;
+box-sizing:border-box;
 }
 
 button{
@@ -90,7 +99,7 @@ width:100%;
 border-radius:10px;
 font-size:16px;
 cursor:pointer;
-margin-top:10px;
+margin-top:18px;
 }
 
 .total{
@@ -98,7 +107,7 @@ background:#000;
 color:white;
 padding:22px;
 border-radius:12px;
-margin-top:14px;
+margin-top:18px;
 text-align:center;
 font-size:30px;
 font-weight:700;
@@ -164,17 +173,21 @@ text-align:center;
 
 <h3>Schedule Rug Cleaning</h3>
 
-<input placeholder="Full Name">
-<input placeholder="Phone Number">
-<input placeholder="Address">
+<label>Full Name</label> <input placeholder="John Smith">
 
-<select id="rugType" onchange="calculateTotal()">
+<label>Phone Number</label> <input placeholder="(916) 000-0000">
+
+<label>Address</label> <input placeholder="Pickup address">
+
+<label>Rug Type</label> <select id="rugType" onchange="calculateTotal()">
+
 <option value="">Select Rug Type</option>
 <option value="3">Handmade Rug ($3 / sqft)</option>
 <option value="1.5">Machine Made Rug ($1.5 / sqft)</option>
 </select>
 
-<select id="rugSize" onchange="calculateTotal()">
+<label>Rug Size</label> <select id="rugSize" onchange="calculateTotal()">
+
 <option value="">Select Size</option>
 <option value="40">5 ft x 8 ft</option>
 <option value="60">6 ft x 10 ft</option>
@@ -199,7 +212,7 @@ text-align:center;
 <option>7:00 PM</option>
 </select>
 
-<input type="file">
+<label>Upload Rug Photo (optional)</label> <input type="file">
 
 <div class="total">
 Total: $<span id="totalPrice">0.00</span>
