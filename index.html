@@ -119,16 +119,12 @@ border-radius:12px;
 border:1px solid #eee;
 }
 
-.media{
+.media img{
+width:100%;
 height:220px;
-background:#f5f5f5;
+object-fit:cover;
 border-radius:12px;
-border:1px dashed #ddd;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#777;
-font-weight:600;
+border:1px solid #eee;
 }
 
 footer{
@@ -256,12 +252,18 @@ Quote: $<span id="quoteTotal">0.00</span>
 
 <section class="section container">
 
-<h2>Our Work</h2>
+<h2>Before & After</h2>
 
-<div class="grid grid-3">
-<div class="media">Add Photo</div>
-<div class="media">Add Video</div>
-<div class="media">Before / After</div>
+<div class="grid grid-2">
+
+<div class="media">
+<img src="before.jpg">
+</div>
+
+<div class="media">
+<img src="after.jpg">
+</div>
+
 </div>
 
 </section>
